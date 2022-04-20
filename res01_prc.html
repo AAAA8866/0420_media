@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.5 user-scalable=no">
+    <title>Responsive_Web</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        
+        .header {background-color: antiquewhite; font-size: 30px; font-weight: 700;}
+        .box01 {background-color: #e3f2fd;}
+        .box02 {background-color: honeydew;}
+        .box03 {background-color: darkkhaki;}
+        .box04 {background-color: #bbdefb;}
+
+        div {
+            text-align: center;
+            line-height: 100px;
+            height: 100px;
+        }
+
+
+        .header, .box01, .box02, .box03, .box04 {
+            width: 100%;
+        }
+
+        .boxMainA {
+            height: 300px;
+        }
+
+        @media all and (min-width:601px) {
+            .boxMainA {
+                width: 100%;
+                height: 100px;
+                overflow: hidden;
+            }
+
+            .boxMainA .box01 {
+                width: 70%;
+                float: left;
+            } 
+
+            .boxMainA .box02 {
+                width: 15%;
+                float: left;
+            }
+
+            .boxMainA .box03 {
+                width: 15%;
+                float: left;
+            }
+        }
+
+        @media all and (min-width:769px) {
+            .boxMain {
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .boxMain .boxMainA {
+                width: 50%;
+                float: left; /*안하면 다음거 블록안보임*/
+                overflow: hidden;
+            }
+
+            .boxMain .boxMainA .box01 {
+                width: 50%;
+            } 
+
+            .boxMain .boxMainA .box02, .boxMain .boxMainA .box03 {
+                width: 25%;
+                height: 100px;
+            }
+
+            .boxMain .box04 {
+                width: 50%;
+                float: left;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="header_outer">
+        <div class="header">PENGUIN</div>
+    </div>
+
+
+    <div class="boxMain">
+        <div class="boxMainA">
+            <div class="box01">펭귄조아</div>
+            <div class="box02"><img src="img/peng001.jpg" alt="" width="100%" height="100%"></div>
+            <div class="box03"><img src="img/peng002.jpg" alt="" width="100%" height="100%"></div>
+        </div>
+        <div class="box04">펭귄조아</div>
+    </div>
+
+    
+
+    
+</body>
+</html>
