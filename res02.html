@@ -24,11 +24,11 @@
         }
 
         #btn_menu:checked~ .lnb_ham {
-            display: block;
+            left:0;
         }
 
         #btn_menu~ .lnb_ham {
-            display: none;
+            left: -100px;
         }
 
         #btn_menu:checked~ .lnb_label .btn_open {display: none;}
@@ -61,6 +61,7 @@
             top: 100px;
             width: 100px;
             text-align: center;
+            transition: all 0.3s;
         }
 
         .lnb_ham li {
